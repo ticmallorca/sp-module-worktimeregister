@@ -1,0 +1,46 @@
+<div class="content">
+
+	<div class="form-group">
+		<% if(module.ticmWorkTimeRegister.settings.isAdmin){%>
+		<label><%= module.ticmWorkTimeRegister.language[page.lang].management_selectUser %></label>
+		<select id="selectUser" class="form-control select" data-fouc>
+			<%= user.profile.id%>
+			<% var users = module.ticmWorkTimeRegister.settings.users%>
+			<% for(var i in users) {%>
+			<option value="<%= users[i].id%>"> <%= users[i].name %> <%= users[i].surname %></option>
+			<% } %>
+			<% } %>
+		</select>
+	</div>
+
+	<div class="card">
+		<div class="card-header header-elements-inline">
+			<h5 class="card-title"><%= module.ticmWorkTimeRegister.language[page.lang].panel_tableTitle %></h5>
+			<div class="header-elements">
+				<div class="list-icons">
+					<a class="list-icons-item" data-action="collapse"></a>
+				</div>
+			</div>
+		</div>
+		<div class="card-body">
+			<%= module.ticmWorkTimeRegister.language[page.lang].panel_tableDescription %>
+
+			<div class="chart-container">
+				<div class="chart has-fixed-height" id="columns_thermometer"></div>
+			</div>
+
+
+			<table id="checkpointListTable" class="table table-bordered table-hover" style="width:100%">
+				<thead>
+					<tr>
+						<th></th>
+						<th><%= module.ticmWorkTimeRegister.language[page.lang].panel_tableColumnDate %></th>
+						<th><%= module.ticmWorkTimeRegister.language[page.lang].panel_tableColumnRegisters%></th>
+						<th><%= module.ticmWorkTimeRegister.language[page.lang].panel_tableColumnTotal %></th>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,159 @@
+<div class="content">
+
+	<div class="form-group">
+		<% if(module.ticmWorkTimeRegister.settings.isAdmin){%>
+		<label><%= module.ticmWorkTimeRegister.language[page.lang].management_selectUser %></label>
+		<select id="selectUser" class="form-control select" data-fouc>
+			<%= user.profile.id%>
+			<% var users = module.ticmWorkTimeRegister.settings.users%>
+			<% for(var i in users) {%>
+			<option value="<%= users[i].id%>"> <%= users[i].name %> <%= users[i].surname %></option>
+			<% } %>
+			<% } %>
+		</select>
+	</div>
+	<div class="mb-3">
+		<div class="row row-tile no-gutters">
+			<div class="col-6">
+				<button onClick="ticmWorkTimeRegister_editCheckpoint()" type="button"
+					class="btn btn-light btn-block btn-float m-0">
+					<i class="mi-fingerprint mi-3x"></i>
+					<span>Afegir registre d'entrada o sortirda</span>
+				</button>
+			</div>
+			<div class="col-6">
+				<button onClick="ticmWorkTimeRegister_editHolidays()" type="button"
+					class="btn btn-light btn-block btn-float m-0">
+					<i class="mi-free-breakfast mi-3x"></i>
+					<span>Agefir registre de vacances ... </span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-header header-elements-inline">
+			<h5 class="card-title">
+				<%= module.ticmWorkTimeRegister.language[page.lang].management_tableCheckpointTitle %></h5>
+			<div class="header-elements">
+				<div class="list-icons">
+					<a class="list-icons-item rotate-180" data-action="collapse"></a>
+				</div>
+			</div>
+		</div>
+		<div class="card-body">
+			<%= module.ticmWorkTimeRegister.language[page.lang].management_tableDescription %>
+
+			<table id="checkpointTable" class="table table-bordered table-hover" style="width:100%">
+				<thead>
+					<tr>
+						<th><%= module.ticmWorkTimeRegister.language[page.lang].management_tableColumnActions %></th>
+						<th><%= module.ticmWorkTimeRegister.language[page.lang].management_tableColumnDate %></th>
+						<th><%= module.ticmWorkTimeRegister.language[page.lang].management_tableColumnType%></th>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-header header-elements-inline">
+			<h5 class="card-title"><%= module.ticmWorkTimeRegister.language[page.lang].management_tableHolidaysTitle %>
+			</h5>
+			<div class="header-elements">
+				<div class="list-icons">
+					<a class="list-icons-item rotate-180" data-action="collapse"></a>
+				</div>
+			</div>
+		</div>
+		<div class="card-body">
+			<table id="holidaysTable" class="table table-bordered table-hover" style="width:100%">
+				<thead>
+					<tr>
+						<th><%= module.ticmWorkTimeRegister.language[page.lang].management_tableColumnActions %></th>
+						<th><%= module.ticmWorkTimeRegister.language[page.lang].management_tableColumnDate %></th>
+						<th><%= module.ticmWorkTimeRegister.language[page.lang].management_tableColumnType%></th>
+						<th><%= module.ticmWorkTimeRegister.language[page.lang].management_tableColumnHours%></th>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div id="modalCheckpoint" class="modal fade" tabindex="1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div id="modalHeader" class="modal-header bg-dark">
+				<h6 id="modalCheckpointTitle" class="modal-title">Registres d'entrada i sortida</h6>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<input id="checkpointId" hidden type="text" value="">
+				<div class="form-group row">
+					<label class="col-form-label col-md-2">Data</label>
+					<div class="col-md-10">
+						<input id="checkpointDate" class="form-control" type="datetime-local" name="datetime-local">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-form-label col-lg-2">Tipus</label>
+					<div class="col-lg-10">
+						<select id="checkpointType" class="form-control">
+							<option value="1">Entrada</option>
+							<option value="2">Sortida</option>
+						</select>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button id="checkpointButton" type="button" data-dismiss="modal" class="btn bg-dark">Desar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- /default modal -->
+<div id="modalHolidays" class="modal fade" tabindex="1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div id="modalHeader" class="modal-header bg-dark">
+				<h6 class="modal-title">Inserir o modificar registres de vacances, baixes, ...</h6>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<input id="holidaysId" hidden type="text" value="">
+				<div class="form-group row">
+					<label class="col-form-label col-md-2">Data</label>
+					<div class="col-md-10">
+						<input id="holidaysDay" class="form-control" type="date">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-form-label col-md-2">Hores</label>
+					<div class="col-md-10">
+						<input id="holidaysHours" class="form-control" type="time">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-form-label col-lg-2">Tipus</label>
+					<div class="col-lg-10">
+						<select id="holidaysType" class="form-control">
+							<option value="1">Vacances</option>
+							<option value="2">Lliure disposició</option>
+							<option value="3">Formació</option>
+							<option value="4">Baixa laboral</option>
+						</select>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button id="holidaysButton" type="button" data-dismiss="modal" class="btn bg-dark">Desar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /default modal -->

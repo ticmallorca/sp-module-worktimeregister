@@ -1,0 +1,26 @@
+<% if(module.ticmWorkTimeRegister.settings.isAdmin){%>
+<li class="nav-item nav-item-submenu">
+	<a href="#" class="nav-link"><i
+			class="mi-fingerprint"></i><span><%= module.ticmWorkTimeRegister.language[page.lang].sidebar_title %></span></a>
+	<ul class="nav nav-group-sub" data-submenu-title="Menu levels">
+		<li class="nav-item"><a href="/ticmWorkTimeRegister/registers" class="nav-link"><i
+					class="mi-fingerprint"></i><span><%= module.ticmWorkTimeRegister.language[page.lang].sidebar_title %></span>
+			</a>
+		</li>
+		<li class="nav-item"><a href="/ticmWorkTimeRegister/management" class="nav-link"><i
+					class="icon-pencil3"></i><span><%= module.ticmWorkTimeRegister.language[page.lang].sidebar_management %></span>
+			</a>
+		</li>
+
+	</ul>
+</li>
+<% }else{ %>
+
+<li class="nav-item">
+	<a href="/ticmWorkTimeRegister/registers" class="nav-link">
+		<i class="mi-fingerprint"></i>
+		<span><%= module.ticmWorkTimeRegister.language[page.lang].sidebar_title %></span>
+	</a>
+</li>
+
+<%}%>

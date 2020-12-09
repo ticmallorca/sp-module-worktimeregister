@@ -1,0 +1,42 @@
+{
+	"module": "ticmWorkTimeRegister",
+	"author": {
+		"author": "Alejandro Villén Hernández",
+		"git": "https://gitlab.com/alejandrovildez"
+	},
+	"contributors": [{
+		"author": "Alejandro Villén Hernández",
+		"git": "https://gitlab.com/alejandrovildez"
+	}],
+	"version": "v1.0.0",
+	"dashboardInfo_title":"Control horario",
+	"dashboardInfo_description":"Registrad vuestra entrada o salida.",
+	"dashboardInfo_button":"Añadir registro",
+
+	"dashboardInfo_modal_title": "Control horario",
+	"dashboardInfo_modal_description": "¿Qué tipo de registro queréis introducir?.",
+	"dashboardInfo_modal_purpose_in": "Entrada",
+	"dashboardInfo_modal_purpose_in_description": "",
+	"dashboardInfo_modal_purpose_out": "Salida",
+	"dashboardInfo_modal_purpose_out_description": "",
+	"dashboardInfo_modal_button": "Guardar registro",
+	"dashboardInfo_modal_dismiss": "Cancelar",
+
+	"panel_tableTitle":"Registro de entradas y salidas",
+	"panel_tableDescription":"",
+	"panel_tableColumnDate":"Fecha",
+	"panel_tableColumnRegisters":"Número de registros",
+	"panel_tableColumnTotal":"Total",
+	"sidebar_title":"Control horario",
+	"sidebar_management":"Gestión",
+
+	"management_tableCheckpointTitle":"Registros de entrada y salida",
+	"management_tableHolidaysTitle":"Vacaciones, bajas, libre disposición ...",
+	"management_tableDescription":"",
+	"management_tableColumnActions":"Acciones",
+	"management_tableColumnDate":"Fecha",
+	"management_tableColumnType":"Tipo",
+	"management_tableColumnHours":"Horas",
+	"management_selectUser":"Elige un usuario"
+
+}

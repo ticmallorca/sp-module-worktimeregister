@@ -1,0 +1,96 @@
+{
+	"name": "ticmWorkTimeRegister",
+	"version": "1.0.0",
+	"link": "/",
+	"settings": {
+		"holiday_type":[
+			{
+				"id": 1,
+				"color": "red"
+			},
+			{
+				"id": 2,
+				"color": "green"
+			},
+			{
+				"id": 3,
+				"color": "yellow"
+			}
+		]
+	},
+	"language": {
+		"en": {},
+		"ca": {},
+		"es": {}
+	},
+	"component": {
+		"sideBar": {
+			"name": "sideBar",
+			"link": "/",
+			"dependencies": {
+				"css": [],
+				"javascript": []
+			}
+		},
+		"dashboardInfo": {
+			"name": "dashboardInfo",
+			"link": "/",
+			"dependencies": {
+				"css": [],
+				"javascript": [
+					"/module/ticmWorkTimeRegister/js/dashboardInfo/dashboardInfo.js",
+					"/module/ticmWorkTimeRegister/js/dashboardInfo/view.js",
+					"/module/ticmWorkTimeRegister/js/dashboardInfo/controller.js"
+				]
+			}
+		},
+		"panel": {
+			"name": "panel",
+			"link": "/",
+			"dependencies": {
+				"css": [
+					"/module/ticmWorkTimeRegister/css/panel/style.css"
+				],
+				"javascript": [
+					"/resources/js/plugins/forms/selects/select2.min.js",
+					"/resources/js/plugins/visualization/echarts/echarts.min.js",
+					"/module/ticmWorkTimeRegister/js/panel/lodash.min.js",
+					"/module/ticmWorkTimeRegister/js/panel/echarts_columns_waterfalls.js",
+					"/module/ticmWorkTimeRegister/js/panel/panel.js",
+					"/module/ticmWorkTimeRegister/js/panel/view.js",
+					"/module/ticmWorkTimeRegister/js/panel/controller.js"
+				]
+			}
+		},
+		"management": {
+			"name": "management",
+			"link": "/",
+			"dependencies": {
+				"css": [
+					"/module/ticmWorkTimeRegister/css/management/style.css"
+				],
+				"javascript": [
+					"/resources/js/plugins/forms/selects/select2.min.js",
+					"/resources/js/plugins/visualization/echarts/echarts.min.js",
+					"/module/ticmWorkTimeRegister/js/management/lodash.min.js",
+					"/module/ticmWorkTimeRegister/js/management/echarts_columns_waterfalls.js",
+					"/module/ticmWorkTimeRegister/js/management/management.js",
+					"/module/ticmWorkTimeRegister/js/management/view.js",
+					"/module/ticmWorkTimeRegister/js/management/controller.js"
+				]
+			}
+		}
+	},
+	"dependencies": {
+		"css": [],
+		"javascript": [
+			"/resources/js/plugins/tables/datatables/datatables.min.js",
+			"/resources/js/plugins/tables/datatables/extensions/buttons.min.js",
+			"/resources/js/plugins/tables/datatables/extensions/responsive.min.js",
+			"/resources/js/plugins/tables/datatables/extensions/jszip/jszip.min.js",
+			"/resources/js/plugins/tables/datatables/extensions/pdfmake/pdfmake.min.js",
+			"/resources/js/plugins/tables/datatables/extensions/pdfmake/vfs_fonts.min.js",
+			"/resources/js/plugins/notifications/bootbox.min.js"
+		]
+	}
+}

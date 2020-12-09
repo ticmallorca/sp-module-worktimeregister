@@ -1,0 +1,83 @@
+<div class="card text-center">
+    <div class="card-body">
+        <i class="mi-touch-app mi-3x  border-dark"></i>
+        <h5 class="card-title"><%= module.ticmWorkTimeRegister.language[page.lang].dashboardInfo_title %></h5>
+        <div class="font-size-sm mb-3"><%= module.ticmWorkTimeRegister.language[page.lang].dashboardInfo_description %>
+        </div>
+        <div>
+            <!-- <button  id="ticmWorkTimeRegister_addRegister" type="button" class="btn btn-primary"><%= module.ticmWorkTimeRegister.language[page.lang].dashboardInfo_button %></button> -->
+            <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#modal_ticmWorkTimeRegister_addRegister"><%= module.ticmWorkTimeRegister.language[page.lang].dashboardInfo_button %></button>
+
+        </div>
+        <div>
+            <div class="table-responsive">
+                <table class="table text-nowrap table-striped">
+                    <thead>
+                        <tr>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="ticmWorkTimeRegister_dashboardInfoTable"></tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal add register -->
+<div id="modal_ticmWorkTimeRegister_addRegister" class="modal fade" data-keyboard="false" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="mi-touch-app mr-2"></i>
+                    &nbsp;<%= module.ticmWorkTimeRegister.language[page.lang].dashboardInfo_modal_title %></h5>
+            </div>
+
+            <div class="modal-body">
+                <p><%= module.ticmWorkTimeRegister.language[page.lang].dashboardInfo_modal_description %></p>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><i class="icon-enter3 icon-2x"></i> <%= module.ticmWorkTimeRegister.language[page.lang].dashboardInfo_modal_purpose_in %></h5>
+                                <p class="mb-3"><%= module.ticmWorkTimeRegister.language[page.lang].dashboardInfo_modal_purpose_in_description %></p>
+                                <button id="ticmWorkTimeRegister_addRegister_enter" type="button" class="btn bg-success btn-ladda btn-ladda-progress ladda-button"
+                                    data-style="slide-left">
+                                    <span
+                                        class="ladda-label"><%= module.ticmWorkTimeRegister.language[page.lang].dashboardInfo_modal_button %></span>
+                                    <span class="ladda-spinner"></span>
+                                    <div class="ladda-progress" style="width: 139px;"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><i class="icon-exit3 icon-2x"></i> <%= module.ticmWorkTimeRegister.language[page.lang].dashboardInfo_modal_purpose_out %></h5>
+                                <p class="mb-3"><%= module.ticmWorkTimeRegister.language[page.lang].dashboardInfo_modal_purpose_out_description %></p>
+                                <button id="ticmWorkTimeRegister_addRegister_exit" type="button" class="btn bg-danger btn-ladda btn-ladda-progress ladda-button"
+                                    data-style="slide-left">
+                                    <span
+                                        class="ladda-label"><%= module.ticmWorkTimeRegister.language[page.lang].dashboardInfo_modal_button %></span>
+                                    <span class="ladda-spinner"></span>
+                                    <div class="ladda-progress" style="width: 139px;"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal"><i class="icon-cross font-size-base mr-1"></i>
+                    <%= module.ticmWorkTimeRegister.language[page.lang].dashboardInfo_modal_dismiss %></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal add register -->

@@ -1,0 +1,42 @@
+{
+	"module": "ticmWorkTimeRegister",
+	"author": {
+		"author": "Alejandro Villén Hernández",
+		"git": "https://gitlab.com/alejandrovildez"
+	},
+	"contributors": [{
+		"author": "Alejandro Villén Hernández",
+		"git": "https://gitlab.com/alejandrovildez"
+	}],
+	"version": "v1.0.0",
+	"dashboardInfo_title":"Workday register",
+	"dashboardInfo_description":"Register your start or end of your workday.",
+	"dashboardInfo_button":"Add register",
+
+	"dashboardInfo_modal_title": "Workday register",
+	"dashboardInfo_modal_description": "What type of registration do you want to enter?.",
+	"dashboardInfo_modal_purpose_in": "Enter",
+	"dashboardInfo_modal_purpose_in_description": "",
+	"dashboardInfo_modal_purpose_out": "Exit",
+	"dashboardInfo_modal_purpose_out_description": "",
+	"dashboardInfo_modal_button": "Save register",
+	"dashboardInfo_modal_dismiss": "Cancel",
+
+	"panel_tableTitle":"Register of start or end of your workday.",
+	"panel_tableDescription":"",
+	"panel_tableColumnDate":"Date",
+	"panel_tableColumnRegisters":"Registers count",
+	"panel_tableColumnTotal":"Total",
+	"sidebar_title":"Workday register",
+	"sidebar_management":"Management",
+
+	"management_tableCheckpointTitle":"Registros de entrada y salida",
+	"management_tableHolidaysTitle":"Vacaciones, bajas, libre disposición ...",
+	"management_tableDescription":"",
+	"management_tableColumnActions":"Acciones",
+	"management_tableColumnDate":"Fecha",
+	"management_tableColumnType":"Tipo",
+	"management_tableColumnHours":"Horas",
+	"management_selectUser":"Select an user"
+
+}
